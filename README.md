@@ -93,7 +93,9 @@ No Linux (com SQLite3 instalado via pacote):
 
 bash
 gcc main.c -lsqlite3 -o main
+
 ▶️ Execução
+
 Crie um arquivo script.sql com comandos SQL, por exemplo:
 
 sql
