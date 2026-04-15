@@ -32,7 +32,7 @@ if (sqlite3_open("meubanco.db", &db) != SQLITE_OK) {
     return 1;
 }
 
-Abertura do banco de dados
+## Abertura do banco de dados
 
 c
 sqlite3 *db;
@@ -40,7 +40,7 @@ if (sqlite3_open("meubanco.db", &db) != SQLITE_OK) {
     return 1;
 }
 
-Cria/abre o arquivo meubanco.db.
+## Cria/abre o arquivo meubanco.db.
 
 Se não conseguir abrir, retorna erro.
 
@@ -62,7 +62,7 @@ Lê todo o conteúdo para a memória.
 
 Garante que a string termine com \0.
 
-Execução do script SQL
+## Execução do script SQL
 
 char *err_msg = 0;
 if (sqlite3_exec(db, sql, 0, 0, &err_msg) != SQLITE_OK) {
@@ -84,10 +84,10 @@ Libera memória alocada.
 
 Fecha o banco de dados.
 
-⚙️ Compilação
+## ⚙️ Compilação
 Para compilar o programa no Windows usando GCC (MinGW):
 
-bash
+## bash
 gcc main.c sqlite3.c -o main.exe
 No Linux (com SQLite3 instalado via pacote):
 
@@ -107,11 +107,11 @@ INSERT INTO usuarios (nome, idade) VALUES ('Marco', 30);
 INSERT INTO usuarios (nome, idade) VALUES ('Ana', 25);
 Execute o programa:
 
-bash
+## bash
 ./main.exe
 O banco meubanco.db será criado/atualizado com os comandos do script.sql.
 
-✅ Resultado Esperado
+## ✅ Resultado Esperado
 Após rodar o programa, o banco meubanco.db conterá a tabela usuarios com os registros inseridos.
 
 Você pode verificar com o cliente SQLite:
